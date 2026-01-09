@@ -71,9 +71,9 @@ This is a **true enterprise EMI lock system**, not a normal app. The system cons
 
 ## 🌐 Download URLs
 
-When deployed to Fly.io:
-- **Admin APK (for provisioning)**: `https://emi-pro-app.fly.dev/apk/admin/admin-v3.0.1.apk`
-- **User APK (for manual install)**: `https://emi-pro-app.fly.dev/apk/user/user-v3.0.1.apk`
+When deployed to Render:
+- **Admin APK (for provisioning)**: `https://fins-pro.onrender.com/apk/admin/admin-v3.0.1.apk`
+- **User APK (for manual install)**: `https://fins-pro.onrender.com/apk/user/user-v3.0.1.apk`
 
 ## 🔧 How to Update APKs
 

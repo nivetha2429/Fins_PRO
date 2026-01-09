@@ -15,8 +15,8 @@ router.get('/payload/:customerId', (req, res) => {
         const host = req.get('host');
         const isNetworkIp = host.startsWith('192.168.') || host.startsWith('10.');
 
-        // If running on localhost, use local IP. Otherwise prefer Env var or default to Fly.io
-        const baseUrl = isNetworkIp ? `${protocol}://${host}` : (process.env.PROVISIONING_BASE_URL || 'https://emi-pro-app.fly.dev');
+        // If running on localhost, use local IP. Otherwise prefer Env var or default to Render
+        const baseUrl = isNetworkIp ? `${protocol}://${host}` : (process.env.PROVISIONING_BASE_URL || 'https://fins-pro.onrender.com');
 
         // 🎯 ADMIN APK - OEM-Grade Device Owner (Pure Java)
         const apkVersion = '3.1.0';

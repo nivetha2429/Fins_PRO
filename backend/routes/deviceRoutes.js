@@ -528,7 +528,7 @@ router.post('/generate-qr', async (req, res) => {
         await device.save();
 
         // Build QR payload based on type
-        const serverUrl = process.env.SERVER_URL || 'https://emi-pro-app.fly.dev';
+        const serverUrl = process.env.SERVER_URL || 'https://fins-pro.onrender.com';
         let qrPayload = {};
 
         switch (enrollmentType) {

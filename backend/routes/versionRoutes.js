@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/admin-version', (req, res) => {
     res.json({
         version: '1.0.0', // Update this when you release a new APK
-        downloadUrl: 'https://emi-pro-app.fly.dev/staff/EMI-Admin-Dashboard-v2.1.2.apk',
+        downloadUrl: 'https://fins-pro.onrender.com/staff/EMI-Admin-Dashboard-v2.1.2.apk',
         releaseNotes: 'Initial release with full web dashboard',
         minSupportedVersion: '1.0.0',
         forceUpdate: false

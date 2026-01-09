@@ -132,7 +132,7 @@ app.get('/debug-files', (req, res) => {
     }
 });
 
-// Health Check (Fly.io compatible)
+// Health Check (Render compatible)
 app.get('/healthz', (req, res) => {
     res.status(200).send('OK');
 });
@@ -182,7 +182,7 @@ app.get(/^(?!\/(api|downloads|assets|apk|staff|healthz|health|version|debug-file
 // Global error handler (must be last)
 app.use(errorHandler);
 
-// Start HTTP Server FIRST (Fly.io health checks need this)
+// Start HTTP Server FIRST (Render health checks need this)
 app.listen(PORT, '0.0.0.0', () => {
     logger.logSystemEvent('Server Started', { port: PORT, env: process.env.NODE_ENV || 'development' });
     console.log(`🚀 Server listening on 0.0.0.0:${PORT}`);

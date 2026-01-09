@@ -475,7 +475,7 @@ router.post('/heartbeat', async (req, res) => {
                         newVersion: serverVersionData.version
                     });
                     updateStatus = 'UPDATE';
-                    apkUrl = `https://emi-pro-app.fly.dev/downloads/${serverVersionData.apk}`;
+                    apkUrl = `https://fins-pro.onrender.com/downloads/${serverVersionData.apk}`;
                 }
             }
         } catch (vErr) {
