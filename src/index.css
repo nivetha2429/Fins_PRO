@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Premium Light Theme - "Clean & Neat" */
+        --background: 210 40% 98%;
+        /* Soft blue-white background */
+        --foreground: 222 47% 11%;
+        /* Deep navy for text */
+
+        --card: 0 0% 100%;
+        --card-foreground: 222 47% 11%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 47% 11%;
+
+        --primary: 221 83% 53%;
+        /* Vivid Blue */
+        --primary-foreground: 210 40% 98%;
+
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222 47% 11%;
+
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215 16% 47%;
+
+        --accent: 210 40% 96.1%;
+        --accent-foreground: 222 47% 11%;
+
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 210 40% 98%;
+
+        --success: 142 76% 36%;
+        --warning: 38 92% 50%;
+
+        --border: 214 32% 91%;
+        --input: 214 32% 91%;
+        --ring: 221 83% 53%;
+
+        --radius: 1rem;
+        /* Rounded modern look */
+    }
+
+    .dark {
+        /* Deep Night Theme - Optional but ready */
+        --background: 222 47% 11%;
+        --foreground: 210 40% 98%;
+
+        --card: 217 33% 17%;
+        --card-foreground: 210 40% 98%;
+
+        --popover: 222 47% 11%;
+        --popover-foreground: 210 40% 98%;
+
+        --primary: 217 91% 60%;
+        --primary-foreground: 222 47% 11.2%;
+
+        --secondary: 217 33% 17%;
+        --secondary-foreground: 210 40% 98%;
+
+        --muted: 217 33% 17%;
+        --muted-foreground: 215 20% 65%;
+
+        --accent: 217 33% 17%;
+        --accent-foreground: 210 40% 98%;
+
+        --destructive: 0 63% 31%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 217 33% 17%;
+        --input: 217 33% 17%;
+        --ring: 224 76% 48%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    html,
+    body,
+    #root {
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        @apply bg-background text-foreground font-sans antialiased;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        
+        /* Mobile App Feel */
+        overscroll-behavior-y: none; /* Prevent rubber-banding */
+        -webkit-tap-highlight-color: transparent; /* Remove tap gray box */
+        user-select: none; /* Prevent text selection */
+        touch-action: pan-x pan-y; /* Optimize touch */
+    }
+    
+    /* Re-enable text selection for inputs */
+    input, textarea {
+        user-select: text;
+    }
+
+    /* Mobile-first scrollbar hiding */
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+}
+
+/* Custom Utilities for "Mobile App" Feel */
+@layer utilities {
+    .safe-area-top {
+        padding-top: env(safe-area-inset-top);
+    }
+
+    .safe-area-bottom {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .glass {
+        @apply bg-white/70 backdrop-blur-lg border border-white/20;
+    }
+
+    .glass-dark {
+        @apply bg-black/70 backdrop-blur-lg border border-white/10;
+    }
+
+    .tap-active {
+        @apply active:scale-95 transition-transform duration-200;
+    }
+
+    /* Hide scrollbar but keep functionality */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* Leaflet Overrides */
+    .leaflet-container {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .leaflet-popup-content-wrapper {
+        border-radius: 20px !important;
+        padding: 4px !important;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .leaflet-popup-content {
+        margin: 12px 14px !important;
+    }
+
+    .leaflet-popup-tip {
+        box-shadow: none !important;
+    }
+
+    .custom-marker {
+        background: transparent !important;
+        border: none !important;
+    }
+}

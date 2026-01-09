@@ -1,0 +1,21 @@
+
+🔍 MongoDB Connection Diagnostics
+
+============================================================
+📍 Connection String: mongodb+srv://nivetha:****@cluster0.irgkzqa.mongodb.net/fins_pro?retryWrites=true&w=majority&appName=Fins_PRO
+📊 Database Name in URI: fins_pro
+============================================================
+
+🔌 Attempting connection...
+
+✅ MongoDB Connected Successfully!
+
+Connection Details:
+  - Database: fins_pro
+  - Host: ac-qd3mfg4-shard-00-01.irgkzqa.mongodb.net
+  - Ready State: 1 (1 = connected)
+
+📁 Checking collections...
+  Collections found: customers, devices, adminusers
+============================================================
+✅ Diagnostic Complete!

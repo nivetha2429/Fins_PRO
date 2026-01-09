@@ -1,0 +1,72 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.securefinance.emilock.admin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:label="SecureAdmin"
+        android:theme="@android:style/Theme.NoDisplay"
+        android:allowBackup="false"
+        tools:ignore="MissingApplicationIcon">
+
+        <receiver
+            android:name="com.securefinance.emilock.admin.AdminReceiver"
+            android:label="SecureAdmin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_receiver" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+                <action android:name="android.app.action.PROFILE_PROVISIONING_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- PROVISIONING ACTIVITY (HIDDEN) -->
+        <activity
+            android:name=".ProvisioningActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- No Launcher Category -->
+            </intent-filter>
+        </activity>
+
+        <!-- LOCK SCREEN ACTIVITY -->
+        <activity
+            android:name=".LockActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_EMERGENCY" />
+            </intent-filter>
+        </activity>
+
+        <!-- LOCK ENFORCEMENT SERVICE -->
+        <service
+            android:name=".LockEnforcementService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse" />
+
+        <!-- BOOT PERSISTENCE RECEIVER -->
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

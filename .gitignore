@@ -1,0 +1,62 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+
+# Ignore APKs in build directories but allow in backend/public/apk
+mobile-app/**/*.apk
+*.aab
+*.ipa
+
+# Allow production APKs in versioned /apk directory
+!backend/public/apk/*.apk
+
+# Android build artifacts
+mobile-app/android/.gradle/
+mobile-app/android/app/build/
+mobile-app/android/admin-dpc/build/
+android/app/build/
+*.log
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+serviceAccountKey.json
+google-services.json
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+output.txt
+remote_downloaded.apk
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Cleanup and deployment scripts (optional)
+cleanup.sh
+deploy-apk.sh
+
+# Legacy directories (removed)
+backend/remote_user.apk

@@ -1,0 +1,20 @@
+{
+    "admin": {
+        "version": "3.1.0",
+        "versionCode": 36,
+        "apk": "/apk/admin/admin-v3.1.0.apk",
+        "updatedAt": "2026-01-09T18:50:00.000Z"
+    },
+    "user": {
+        "version": "3.0.2",
+        "versionCode": 35,
+        "apk": "/apk/user/user-v3.0.2.apk",
+        "updatedAt": "2026-01-09T18:45:00.000Z"
+    },
+    "superadmin": {
+        "version": "3.0.2",
+        "versionCode": 35,
+        "apk": "/apk/superadmin/superadmin-web-v3.0.2.apk",
+        "updatedAt": "2026-01-09T16:35:00.000Z"
+    }
+}
