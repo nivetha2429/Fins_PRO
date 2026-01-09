@@ -73,7 +73,7 @@ signingConfigs {
 ```
 ┌─────────────────────────────────────────────────────┐
 │                 ADMIN DASHBOARD (Web)                │
-│              https://emi-pro-app.fly.dev             │
+│              https://fins-pro.onrender.com             │
 └────────────────────┬────────────────────────────────┘
                      │
                      ↓ REST APIs
@@ -113,7 +113,7 @@ signingConfigs {
 ## 📝 PRODUCTION READINESS CHECKLIST
 
 ### Phase 1: Infrastructure & Security
-- [x] Backend deployed (Fly.io/Render) with HTTPS.
+- [x] Backend deployed (Render) with HTTPS.
 - [x] Database secured (MongoDB Atlas).
 - [ ] **Critical**: Release Keystore generated & backed up.
 - [ ] **Critical**: Admin & User APKs signed with Release Key.

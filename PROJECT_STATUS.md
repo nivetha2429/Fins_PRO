@@ -47,9 +47,9 @@
 ## 🚀 DEPLOYMENT STATUS
 
 ### Production Environment
-- **Backend**: Deployed on Fly.io (https://emi-pro-app.fly.dev)
+- **Backend**: Deployed on Render (https://fins-pro.onrender.com)
 - **Frontend**: Integrated with backend
-- **APKs**: Hosted on Fly.io with auto-update support
+- **APKs**: Hosted on Render with auto-update support
 - **Database**: MongoDB (production cluster)
 
 ### APK Versions
@@ -60,7 +60,7 @@
 | Super Admin | 3.0.2 | ~40 MB | ✅ Live |
 
 ### API Endpoints
-- **Base URL**: `https://emi-pro-app.fly.dev`
+- **Base URL**: `https://fins-pro.onrender.com`
 - **Health Check**: `/healthz` ✅
 - **Version Info**: `/version` ✅
 - **Provisioning**: `/api/provisioning/payload/:customerId` ✅

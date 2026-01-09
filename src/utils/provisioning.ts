@@ -3,7 +3,7 @@ import { API_BASE_URL } from '@/config/api';
 // CRITICAL: The provisioning flow downloads the APK from a URL. 
 // This URL MUST be accessible from the public internet (or the device's network).
 // Localhost will NOT work for a factory reset device.
-const PROVISIONING_BASE_URL = 'https://emi-pro-app.fly.dev';
+const PROVISIONING_BASE_URL = 'https://fins-pro.onrender.com';
 
 /**
  * Generate Android Device Owner Provisioning QR Code

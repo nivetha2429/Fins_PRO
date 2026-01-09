@@ -922,7 +922,7 @@ export default function CustomerDetails() {
                             </p>
                         </div>
 
-                        <Button variant="outline" className="w-full" onClick={() => window.open(`https://emi-pro-app.fly.dev/downloads/${apkName}`)}>
+                        <Button variant="outline" className="w-full" onClick={() => window.open(`https://fins-pro.onrender.com/downloads/${apkName}`)}>
                             <Download className="w-4 h-4 mr-2" /> Download APK Directly
                         </Button>
                     </div>

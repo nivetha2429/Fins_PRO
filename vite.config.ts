@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     proxy: {
       '/api': {
-        target: 'https://emi-pro-app.fly.dev',
+        target: 'https://fins-pro.onrender.com',
         changeOrigin: true,
       }
     }
