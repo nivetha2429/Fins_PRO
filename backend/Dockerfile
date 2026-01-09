@@ -1,4 +1,4 @@
-# Dockerfile for EMI Pro Backend - Fly.io Deployment
+# Dockerfile for Fins Pro Backend - Render Deployment
 
 FROM node:18-alpine
 
@@ -14,12 +14,11 @@ RUN npm install --production
 # Copy application code
 COPY . .
 
-# Expose port
-EXPOSE 8080
+# Expose port (Render uses PORT env variable)
+EXPOSE 5000
 
 # Set environment
 ENV NODE_ENV=production
-ENV PORT=8080
 
 # Start the server
 CMD ["node", "server.js"]
